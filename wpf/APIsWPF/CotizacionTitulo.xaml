@@ -1,0 +1,56 @@
+﻿<src:IOLWindow x:Class="APIsWPF.CotizacionTitulo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:src="clr-namespace:APIsWPF.Configuracion"
+        xmlns:local="clr-namespace:APIsWPF"
+        mc:Ignorable="d"
+        Title="CotizacionTitulo" Height="588.607" Width="696.885" MinWidth="696.885" MinHeight="588.607" MaxHeight="588.607" MaxWidth="696.885" >
+    <Grid>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="538" Margin="10,10,0,0" VerticalAlignment="Top" Width="669">
+            <TabItem Header="Cliente">
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="label" Content="Datos Cotización"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"  Margin="10,115,-16,0" VerticalAlignment="Top" Width="615" Background="#FF8AE680" FontSize="14"/>
+                    <Label x:Name="label_Copy" Content="Precio Apertura:" HorizontalAlignment="Left" Margin="5,145,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Label x:Name="label_Copy1" Content="Último Cierre:" HorizontalAlignment="Left" Margin="5,176,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Label x:Name="label_Copy2" Content="Máximo:" HorizontalAlignment="Left" Margin="5,207,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Label x:Name="label_Copy3" Content="Mínimo:" HorizontalAlignment="Left" Margin="5,234,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Label x:Name="label_Copy4" Content="Fecha/Hora" HorizontalAlignment="Left" Margin="5,265,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Label x:Name="label_Copy5" Content="Caja de Puntas" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="15,304,0,0" VerticalAlignment="Top" Width="637" Background="#FF77D66E" FontSize="14"/>
+                    <DataGrid x:Name="dataGrid" IsReadOnly="True" CanUserAddRows="False" Margin="15,338,10,0" VerticalAlignment="Top" Height="150"/>
+                    <Label x:Name="lblApertura" HorizontalAlignment="Left" Margin="110,145,0,0" VerticalAlignment="Top" Width="542"/>
+                    <Label x:Name="lblUltimo"  HorizontalAlignment="Left" Margin="110,176,0,0" VerticalAlignment="Top" Width="542"/>
+                    <Label x:Name="lblMaximo"  HorizontalAlignment="Left" Margin="110,207,0,0" VerticalAlignment="Top" Width="542"/>
+                    <Label x:Name="lblMinimo"  HorizontalAlignment="Left" Margin="110,234,0,0" VerticalAlignment="Top" Width="542"/>
+                    <Label x:Name="lblFecha"  HorizontalAlignment="Left" Margin="110,265,0,0" VerticalAlignment="Top" Width="542"/>
+                    <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="341,37,0,0" VerticalAlignment="Top" Width="75" Click="btnBuscar_Click"/>
+                    <Label x:Name="label1" Content="Simbolo" HorizontalAlignment="Left" Margin="15,6,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="cmbMercado" SelectedIndex="0" HorizontalAlignment="Left" Margin="173,37,0,0" VerticalAlignment="Top" Width="150">
+                        <ComboBoxItem Content="BCBA" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="ROFX" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="NYSE" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="NASDAQ" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="AMEX" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="BCS" HorizontalAlignment="Left" Width="118"/>
+                    </ComboBox>
+                    <TextBox x:Name="txtSimbolo" HorizontalAlignment="Left" Height="23" Margin="15,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138"/>
+                    <Label x:Name="label1_Copy" Content="Mercado" HorizontalAlignment="Left" Margin="173,6,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblUrl" Foreground="Red" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Margin="10,65,-16,0" VerticalAlignment="Top" Width="615" Height="45"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="JSON">
+                <Grid Background="#FFE5E5E5">
+                    <RichTextBox x:Name="txtJson" Margin="10" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalScrollBarVisibility="Visible">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</src:IOLWindow>
